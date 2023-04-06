@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
-  const [inputs, setInputs] = useState({ title: '', author: '' });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const id = uuidv4();
-    const book = { id, ...inputs };
-    dispatch(addBook(book));
-    setInputs({ title: '', author: '' });
-  };
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setInputs((prevState) => ({ ...prevState, [name]: value }));
+    const title = event.target.elements.title.value;
+    const author = event.target.elements.author.value;
+    const category = 'religion';
+    await dispatch(addBook({
+      id, title, author, category,
+    }));
+    event.target.reset();
   };
 
   return (
@@ -25,16 +23,14 @@ const AddBook = () => {
       <input
         type="text"
         name="title"
-        value={inputs.title}
-        onChange={handleInputChange}
         placeholder="Title"
+        required
       />
       <input
         type="text"
         name="author"
-        value={inputs.author}
-        onChange={handleInputChange}
         placeholder="Author"
+        required
       />
       <button type="submit">Add Book</button>
     </form>
