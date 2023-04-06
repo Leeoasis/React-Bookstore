@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
-const urlEndPoint = 'Dn2UgTzXJKp4KoqXAuqA/books/';
+const urlEndPoint = 'z2NP5NXo87KPEKUYTK76/books/';
 const apiUrl = baseUrl + urlEndPoint;
 
 function transformData(data) {

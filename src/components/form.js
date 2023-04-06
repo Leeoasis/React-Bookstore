@@ -16,6 +16,7 @@ const AddBook = () => {
       id, title, author, category,
     }));
     event.target.reset();
+    window.location.reload();
   };
 
   return (
