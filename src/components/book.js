@@ -6,23 +6,24 @@ import { removeBook } from '../redux/books/booksSlice';
 const Book = ({ book }) => {
   const dispatch = useDispatch();
   return (
-    <>
+    <div className="Lesson-Panel">
       <p key={book.id}>
-        <strong>{book.title}</strong>
+        <strong className="Title">{book.title}</strong>
+        <br />
         {' '}
-        <span>by</span>
         {' '}
-        <strong>{book.author}</strong>
+        <strong className="author">{book.author}</strong>
       </p>
       <button
         type="button"
         onClick={() => {
           dispatch(removeBook(book.id));
         }}
+        className="Remove"
       >
-        Delete
+        Remove
       </button>
-    </>
+    </div>
   );
 };
 

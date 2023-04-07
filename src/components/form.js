@@ -21,19 +21,25 @@ const AddBook = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="Line" />
+      <h3 className="addTitle Text-Style-10">
+        ADD NEW BOOK
+      </h3>
       <input
         type="text"
         name="title"
         placeholder="Title"
         required
+        className="book-input"
       />
       <input
         type="text"
         name="author"
         placeholder="Author"
+        className="author-input"
         required
       />
-      <button type="submit">Add Book</button>
+      <button type="submit" className="Rectangle-2">Add Book</button>
     </form>
   );
 };
