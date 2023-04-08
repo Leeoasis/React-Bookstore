@@ -1,3 +1,340 @@
-* {
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --Montserrat: 'Montserrat', sans-serif;
+  --RobotoSlab: 'Roboto Slab', serif;
+  --azure: #0290ff;
+  --z: #fafafa;
+  --white: #e8e8e8;
+  --white-two: #fff;
+  --cool-blue: #4386bf;
+  --very-light-pink: #c4c4c4;
+  --pale-grey: #f5f6fa;
+}
+
+body {
+  width: 100vh;
+  height: 89.625rem;
+  padding: 9.313rem 3.75rem 7.688rem 6.25rem;
+  background-color: var(--pale-grey);
+}
+
+.Panel-bg {
+  width: 87.5rem;
+  height: 68.563rem;
+  margin: 0 2.5rem 4.063rem 0;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--z);
+}
+
+.container {
+  width: 87.5rem;
+  height: 5.938rem;
+  background-color: var(--white-two);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Oval {
+  width: 2.813rem;
+  height: 2.813rem;
+  margin-left: auto;
+  margin-right: 6.5rem;
+  margin-top: 1rem;
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+}
+
+.Mask {
+  margin-top: 0.7rem;
+  padding-left: 20%;
+  width: 1.063rem;
+  height: 1.063rem;
+}
+
+.bookstore {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 1.375rem 2.938rem 0.125rem 6.25rem;
+  font-family: var(--Montserrat);
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links li {
+  list-style-type: none;
+  margin-top: 1.055rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  width: 3.688rem;
+  height: 1rem;
+  font-family: var(--Montserrat);
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.Lesson-Panel {
+  width: 75rem;
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white-two);
+}
+
+.Title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  padding-left: 2.963rem;
+  font-family: var(--RobotoSlab);
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  padding-left: 2.963rem;
+  font-family: var(--RobotoSlab);
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+}
+
+.Remove {
+  width: 3.375rem;
+  height: 1.188rem;
+  font-family: var(--RobotoSlab);
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  background-color: transparent;
+  border: none;
+}
+
+.Line {
+  width: 75rem;
+  margin: 2.5rem auto 1.81rem 6.25rem;
+  border: solid 1px #e8e8e8;
+}
+
+.addTitle {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin-left: 6.25rem;
+  font-family: var(--Montserrat);
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.book-input {
+  height: 2.813rem;
+  margin-left: 6.25rem;
+  padding: 0.813rem 15.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  font-family: var(--RobotoSlab);
+  font-size: 1rem;
+  border: solid 1px #e8e8e8;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  background-color: var(--white-two);
+}
+
+.author-input {
+  height: 2.813rem;
+  margin-left: 3rem;
+  padding: 0.813rem 9.688rem 0.813rem 1.063rem;
+  font-family: var(--RobotoSlab);
+  font-size: 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: var(--very-light-pink);
+}
+
+.Rectangle-2 {
+  height: 2.813rem;
+  padding: 1.513rem 12rem 2.413rem 1.063rem;
+  margin: auto 0 auto 3rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 3px;
+  background-color: var(--azure);
+  font-family: var(--RobotoSlab);
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+}
+
+.btn-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-start;
+}
+
+.Line-2 {
+  height: 1.5rem;
+  border: solid 1px var(--white);
+}
+
+.vertical-line {
+  transform: rotate(90deg);
+  height: -5rem;
+  width: 7rem;
+  margin-top: -3rem;
+  margin-left: 13rem;
+  border: 1px solid var(--white);
+}
+
+.book-progress {
+  margin-left: 32rem;
+  margin-top: -5.5rem;
+}
+
+div[role='progressbar'] {
+  --size: 5rem;
+  --fg: #369;
+  --bg: #def;
+  --value: 30;
+  --pgPercentage: var(--value);
+
+  width: 4rem;
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0;
+  color: var(--fg);
+}
+
+div[role='progressbar']::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+.Percent-Complete {
+  font-family: var(--Montserrat);
+  font-size: 2rem;
+  font-weight: normal;
+  margin-left: 7.5rem;
+  margin-top: -6rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Completed {
+  width: 11%;
+  margin-left: 7.5rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+}
+
+.chapters {
+  margin-left: 21rem;
+  margin-top: -4.6rem;
+}
+
+.Current-Chapter {
+  font-family: var(--RobotoSlab);
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.Current-Lesson {
+  font-family: var(--RobotoSlab);
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.Update-progress {
+  font-family: var(--RobotoSlab);
+  padding: 0.8em 1.4rem;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
 }
