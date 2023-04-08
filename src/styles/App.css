@@ -14,7 +14,7 @@
 }
 
 body {
-  width: 100rem;
+  width: 100vh;
   height: 89.625rem;
   padding: 9.313rem 3.75rem 7.688rem 6.25rem;
   background-color: var(--pale-grey);
@@ -73,6 +73,10 @@ nav {
   color: var(--azure);
 }
 
+ul li {
+  list-style-type: none;
+}
+
 .nav-links {
   display: flex;
   gap: 3rem;
@@ -110,7 +114,7 @@ nav {
   width: 12.313rem;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
-  padding-left: 1.063rem;
+  padding-left: 2.963rem;
   font-family: var(--RobotoSlab);
   font-size: 1.375rem;
   font-weight: bold;
@@ -125,7 +129,7 @@ nav {
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
-  padding-left: 1.063rem;
+  padding-left: 2.963rem;
   font-family: var(--RobotoSlab);
   font-size: 0.875rem;
   font-weight: 300;
@@ -139,8 +143,6 @@ nav {
 .Remove {
   width: 3.375rem;
   height: 1.188rem;
-  margin: 0.188rem 0.938rem 0.125rem 0;
-  padding-left: 1.063rem;
   font-family: var(--RobotoSlab);
   font-size: 0.875rem;
   font-weight: 300;
@@ -220,4 +222,119 @@ nav {
   letter-spacing: 0.5px;
   text-align: center;
   color: var(--white-two);
+}
+
+.btn-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-start;
+}
+
+.Line-2 {
+  height: 1.5rem;
+  border: solid 1px var(--white);
+}
+
+.vertical-line {
+  transform: rotate(90deg);
+  height: -5rem;
+  width: 7rem;
+  margin-top: -3rem;
+  margin-left: 13rem;
+  border: 1px solid var(--white);
+}
+
+.book-progress {
+  margin-left: 32rem;
+  margin-top: -5.5rem;
+}
+
+div[role='progressbar'] {
+  --size: 6rem;
+  --fg: #369;
+  --bg: #def;
+  --value: 30;
+  --pgPercentage: var(--value);
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0;
+  color: var(--fg);
+}
+
+div[role='progressbar']::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+.Percent-Complete {
+  font-family: var(--Montserrat);
+  font-size: 2rem;
+  font-weight: normal;
+  margin-left: 7.5rem;
+  margin-top: -6rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Completed {
+  width: 11%;
+  margin-left: 7.5rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+}
+
+.chapters {
+  margin-left: 21rem;
+  margin-top: -4.6rem;
+}
+
+.Current-Chapter {
+  font-family: var(--RobotoSlab);
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.Current-Lesson {
+  font-family: var(--RobotoSlab);
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.Update-progress {
+  font-family: var(--RobotoSlab);
+  padding: 0.8em 1.4rem;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
 }
