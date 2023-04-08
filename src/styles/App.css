@@ -250,13 +250,13 @@ ul li {
 }
 
 div[role='progressbar'] {
-  --size: 6rem;
+  --size: 5rem;
   --fg: #369;
   --bg: #def;
   --value: 30;
   --pgPercentage: var(--value);
 
-  width: var(--size);
+  width: 4rem;
   height: var(--size);
   border-radius: 50%;
   display: grid;
